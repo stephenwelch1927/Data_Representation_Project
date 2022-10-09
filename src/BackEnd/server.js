@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
 //Set up using the mongod database
-const strConnection = 'mongodb+srv://admin:bluebirds1927@cluster0.m46dm.mongodb.net/mongoDBLAB?retryWrites=true&w=majority';
+const strConnection = 'mongodb+srv://stephenwelch1927:bluebirds1927@cluster0.hw58zei.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(strConnection, {useNewUrlParser: true});
 
 //Set up holiday schema
@@ -95,7 +95,7 @@ app.delete('/holiday/add/:id', (req,res)=>{
 
 //App Get to deploy of the server and retrieve
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'../../build/index.html'));
+   res.sendFile(path.join(__dirname+'../../build/index.html'));
 })
 
 //listening at localhost 4000
